@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import {
-  MessageCircle,
   Users,
   CheckCircle,
   Star,
@@ -235,10 +234,15 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center">
+            <div className="flex items-center relative">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
-                  <MessageCircle className="h-5 w-5 text-white" />
+                <div className="relative">
+                  {/* Large eye-catching logo that doesn't affect layout */}
+                  <img
+                    src="/logo.png?v=9"
+                    alt="WhatsEra Logo"
+                    className="w-8 h-8 relative z-10 transform hover:scale-110 transition-transform duration-300 drop-shadow-lg"
+                  />
                 </div>
                 <span className="text-xl font-bold text-gray-900">
                   WhatsEra
@@ -593,9 +597,11 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
-                <MessageCircle className="h-5 w-5 text-white" />
-              </div>
+              <img
+                src="/logo.png?v=9"
+                alt="WhatsEra Logo"
+                className="w-8 h-8 mr-3"
+              />
               <span className="text-xl font-bold text-gray-900">
                 WhatsEra
               </span>
