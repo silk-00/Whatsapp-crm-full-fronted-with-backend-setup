@@ -218,6 +218,7 @@ export default function LandingPage() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [activeTeam, setActiveTeam] = useState<'sales' | 'support' | 'marketing'>('sales');
+  const [selectedPlan, setSelectedPlan] = useState<'growth' | 'starter' | 'business'>('growth');
 
   const handleGetStarted = (): void => {
     navigate('/signup');
@@ -562,7 +563,14 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Starter Plan */}
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+            <div
+              onClick={() => setSelectedPlan('starter')}
+              className={`bg-white rounded-xl shadow-lg p-8 border-2 cursor-pointer transition-all duration-300 hover:shadow-xl ${
+                selectedPlan === 'starter'
+                  ? 'border-green-500 ring-2 ring-green-200'
+                  : 'border-gray-200 hover:border-gray-300'
+              }`}
+            >
               <div className="text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Starter</h3>
                 <p className="text-gray-600 mb-6">Perfect for small businesses</p>
@@ -570,7 +578,14 @@ export default function LandingPage() {
                   <span className="text-4xl font-bold text-gray-900">₹1,099</span>
                   <span className="text-gray-600">/month</span>
                 </div>
-                <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-semibold transition-colors mb-6">
+                <button
+                  onClick={handleGetStarted}
+                  className={`w-full px-6 py-3 rounded-lg font-semibold transition-colors mb-6 ${
+                    selectedPlan === 'starter'
+                      ? 'bg-green-500 hover:bg-green-600 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
+                >
                   Start Free Trial
                 </button>
               </div>
@@ -603,9 +618,20 @@ export default function LandingPage() {
             </div>
 
             {/* Growth Plan */}
-            <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-green-500 relative">
+            <div
+              onClick={() => setSelectedPlan('growth')}
+              className={`bg-white rounded-xl shadow-lg p-8 border-2 relative cursor-pointer transition-all duration-300 hover:shadow-xl ${
+                selectedPlan === 'growth'
+                  ? 'border-green-500 ring-2 ring-green-200'
+                  : 'border-gray-200 hover:border-gray-300'
+              }`}
+            >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                <span className={`px-4 py-1 rounded-full text-sm font-medium ${
+                  selectedPlan === 'growth'
+                    ? 'bg-green-500 text-white'
+                    : 'bg-gray-400 text-white'
+                }`}>
                   Most Popular
                 </span>
               </div>
@@ -616,7 +642,14 @@ export default function LandingPage() {
                   <span className="text-4xl font-bold text-gray-900">₹4,099</span>
                   <span className="text-gray-600">/month</span>
                 </div>
-                <button className="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors mb-6">
+                <button
+                  onClick={handleGetStarted}
+                  className={`w-full px-6 py-3 rounded-lg font-semibold transition-colors mb-6 ${
+                    selectedPlan === 'growth'
+                      ? 'bg-green-500 hover:bg-green-600 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
+                >
                   Start Free Trial
                 </button>
               </div>
@@ -655,7 +688,14 @@ export default function LandingPage() {
             </div>
 
             {/* Business Plan */}
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+            <div
+              onClick={() => setSelectedPlan('business')}
+              className={`bg-white rounded-xl shadow-lg p-8 border-2 cursor-pointer transition-all duration-300 hover:shadow-xl ${
+                selectedPlan === 'business'
+                  ? 'border-green-500 ring-2 ring-green-200'
+                  : 'border-gray-200 hover:border-gray-300'
+              }`}
+            >
               <div className="text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Business</h3>
                 <p className="text-gray-600 mb-6">For large organizations</p>
@@ -663,7 +703,14 @@ export default function LandingPage() {
                   <span className="text-4xl font-bold text-gray-900">₹7,399</span>
                   <span className="text-gray-600">/month</span>
                 </div>
-                <button className="w-full bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors mb-6">
+                <button
+                  onClick={handleGetStarted}
+                  className={`w-full px-6 py-3 rounded-lg font-semibold transition-colors mb-6 ${
+                    selectedPlan === 'business'
+                      ? 'bg-green-500 hover:bg-green-600 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
+                >
                   Start Free Trial
                 </button>
               </div>
@@ -972,7 +1019,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
               <p className="text-gray-700 mb-6">
