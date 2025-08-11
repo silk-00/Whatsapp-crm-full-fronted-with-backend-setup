@@ -549,6 +549,91 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Comparison Section */}
+      <section id="comparison" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why choose WhatsEra?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See how WhatsEra compares to traditional customer support solutions
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-xl shadow-lg">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Features</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-green-600">WhatsEra</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600">Traditional CRM</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600">Email Support</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-6 py-4 text-sm text-gray-900">AI-Powered Responses</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 text-sm text-gray-900">WhatsApp Integration</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-yellow-500 text-sm">Limited</span>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm text-gray-900">Real-time Analytics</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-yellow-500 text-sm">Basic</span>
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 text-sm text-gray-900">Setup Time</td>
+                  <td className="px-6 py-4 text-center text-sm text-green-600 font-medium">5 minutes</td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-600">2-4 weeks</td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-600">1-2 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -774,90 +859,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Comparison Section */}
-      <section id="comparison" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why choose WhatsEra?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how WhatsEra compares to traditional customer support solutions
-            </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-xl shadow-lg">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Features</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-green-600">WhatsEra</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600">Traditional CRM</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600">Email Support</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 text-sm text-gray-900">AI-Powered Responses</td>
-                  <td className="px-6 py-4 text-center">
-                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <svg className="h-5 w-5 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <svg className="h-5 w-5 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 text-sm text-gray-900">WhatsApp Integration</td>
-                  <td className="px-6 py-4 text-center">
-                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <span className="text-yellow-500 text-sm">Limited</span>
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <svg className="h-5 w-5 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm text-gray-900">Real-time Analytics</td>
-                  <td className="px-6 py-4 text-center">
-                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <span className="text-yellow-500 text-sm">Basic</span>
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 text-sm text-gray-900">Setup Time</td>
-                  <td className="px-6 py-4 text-center text-sm text-green-600 font-medium">5 minutes</td>
-                  <td className="px-6 py-4 text-center text-sm text-gray-600">2-4 weeks</td>
-                  <td className="px-6 py-4 text-center text-sm text-gray-600">1-2 days</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
 
       {/* Case Studies Section */}
       <section id="casestudies" className="py-20 bg-gray-50">
