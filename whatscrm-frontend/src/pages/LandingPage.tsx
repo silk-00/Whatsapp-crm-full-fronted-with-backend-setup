@@ -232,10 +232,10 @@ export default function LandingPage() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex items-center relative">
-              <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-between h-16 w-full">
+            {/* Logo - Fixed width */}
+            <div className="flex items-center flex-shrink-0">
+              <div className="flex items-center space-x-3">
                 <div className="relative">
                   {/* Large eye-catching logo that doesn't affect layout */}
                   <img
@@ -250,32 +250,29 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="#product" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Product</a>
-              <a href="#usecase" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Use Case</a>
-              <a href="#comparison" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Comparison</a>
-              <a href="#pricing" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Pricing</a>
-              <a href="#casestudies" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Case Studies</a>
-              <a href="#about" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">About us</a>
+            {/* Center Navigation - Flexible */}
+            <nav className="hidden lg:flex items-center justify-center flex-1 mx-8">
+              <div className="flex items-center space-x-8">
+                <a href="#product" className="text-gray-600 hover:text-gray-900 font-medium transition-colors whitespace-nowrap">Product</a>
+                <a href="#usecase" className="text-gray-600 hover:text-gray-900 font-medium transition-colors whitespace-nowrap">Use Case</a>
+                <a href="#comparison" className="text-gray-600 hover:text-gray-900 font-medium transition-colors whitespace-nowrap">Comparison</a>
+                <a href="#pricing" className="text-gray-600 hover:text-gray-900 font-medium transition-colors whitespace-nowrap">Pricing</a>
+                <a href="#casestudies" className="text-gray-600 hover:text-gray-900 font-medium transition-colors whitespace-nowrap">Case Studies</a>
+                <a href="#about" className="text-gray-600 hover:text-gray-900 font-medium transition-colors whitespace-nowrap">About us</a>
+              </div>
             </nav>
 
-            {/* Right side buttons */}
-            <div className="hidden md:flex items-center space-x-4">
+            {/* Right side buttons - Fixed width */}
+            <div className="flex items-center space-x-3 flex-shrink-0">
               <button
                 onClick={handleLogin}
-                className="text-gray-600 hover:text-gray-900 px-4 py-2 font-medium transition-colors"
+                className="hidden md:block bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap"
               >
                 Login
               </button>
               <button
-                className="text-gray-600 hover:text-gray-900 px-4 py-2 font-medium transition-colors"
-              >
-                Contact Sales
-              </button>
-              <button
                 onClick={handleGetStarted}
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-medium transition-colors whitespace-nowrap"
               >
                 Try for free
               </button>
@@ -543,6 +540,521 @@ export default function LandingPage() {
                     <div className="bg-blue-100 text-blue-800 p-3 rounded-lg max-w-xs">
                       <p className="text-sm">🔎 AI is writing...</p>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Simple, transparent pricing
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the perfect plan for your business. Start free and scale as you grow.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Starter Plan */}
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Starter</h3>
+                <p className="text-gray-600 mb-6">Perfect for small businesses</p>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-gray-900">₹1,099</span>
+                  <span className="text-gray-600">/month</span>
+                </div>
+                <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-semibold transition-colors mb-6">
+                  Start Free Trial
+                </button>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Up to 1,000 contacts
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  5,000 messages/month
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Basic AI responses
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Email support
+                </li>
+              </ul>
+            </div>
+
+            {/* Growth Plan */}
+            <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-green-500 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  Most Popular
+                </span>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Growth</h3>
+                <p className="text-gray-600 mb-6">Best for growing businesses</p>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-gray-900">₹4,099</span>
+                  <span className="text-gray-600">/month</span>
+                </div>
+                <button className="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors mb-6">
+                  Start Free Trial
+                </button>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Up to 10,000 contacts
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  25,000 messages/month
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Advanced AI & automation
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Analytics & reports
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Priority support
+                </li>
+              </ul>
+            </div>
+
+            {/* Business Plan */}
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Business</h3>
+                <p className="text-gray-600 mb-6">For large organizations</p>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-gray-900">₹7,399</span>
+                  <span className="text-gray-600">/month</span>
+                </div>
+                <button className="w-full bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors mb-6">
+                  Start Free Trial
+                </button>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Unlimited contacts
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Unlimited messages
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Custom AI training
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  API access
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Dedicated support
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h3>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-6">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h4 className="font-semibold text-gray-900 mb-2">Can I change my plan anytime?</h4>
+                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h4 className="font-semibold text-gray-900 mb-2">Is there a free trial?</h4>
+                <p className="text-gray-600">Yes, we offer a 14-day free trial for all plans. No credit card required to get started.</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h4 className="font-semibold text-gray-900 mb-2">What payment methods do you accept?</h4>
+                <p className="text-gray-600">We accept all major credit cards, UPI, net banking, and bank transfers for annual plans.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Section */}
+      <section id="comparison" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why choose WhatsEra?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See how WhatsEra compares to traditional customer support solutions
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-xl shadow-lg">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Features</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-green-600">WhatsEra</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600">Traditional CRM</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600">Email Support</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-6 py-4 text-sm text-gray-900">AI-Powered Responses</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 text-sm text-gray-900">WhatsApp Integration</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-yellow-500 text-sm">Limited</span>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm text-gray-900">Real-time Analytics</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="h-5 w-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-yellow-500 text-sm">Basic</span>
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 text-sm text-gray-900">Setup Time</td>
+                  <td className="px-6 py-4 text-center text-sm text-green-600 font-medium">5 minutes</td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-600">2-4 weeks</td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-600">1-2 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section id="casestudies" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Success Stories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See how businesses like yours are growing with WhatsEra
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Case Study 1 - Abandoned Cart Recovery */}
+            <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl shadow-lg p-8 border border-red-100">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0L17 18m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 100 4 2 2 0 000-4z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Abandoned Cart Recovery</h3>
+                  <p className="text-gray-600">Fashion E-commerce Store</p>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <div className="bg-white rounded-lg p-4 mb-4">
+                  <h4 className="font-semibold text-red-600 mb-2">The Challenge</h4>
+                  <p className="text-sm text-gray-700">68% cart abandonment rate with only 20% email open rates</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 text-center mb-4">
+                  <div className="bg-white rounded-lg p-3">
+                    <div className="text-2xl font-bold text-green-500">21%</div>
+                    <div className="text-xs text-gray-600">Cart Recovery</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-3">
+                    <div className="text-2xl font-bold text-blue-500">82%</div>
+                    <div className="text-xs text-gray-600">Open Rate</div>
+                  </div>
+                </div>
+
+                <div className="bg-green-100 rounded-lg p-3 text-center">
+                  <div className="text-lg font-bold text-green-700">₹4.8L</div>
+                  <div className="text-xs text-green-600">Revenue Boost in 60 days</div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-4">
+                <p className="text-sm text-gray-700 italic">
+                  "Hi Priya, your red maxi dress is still in your cart – only 3 left in stock! Get 5% off if you complete your purchase in 24 hours."
+                </p>
+              </div>
+            </div>
+
+            {/* Case Study 2 - Post-Purchase Engagement */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border border-blue-100">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Post-Purchase Engagement</h3>
+                  <p className="text-gray-600">Electronics Store</p>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <div className="bg-white rounded-lg p-4 mb-4">
+                  <h4 className="font-semibold text-blue-600 mb-2">The Challenge</h4>
+                  <p className="text-sm text-gray-700">Only 12% repeat purchases & 8% review collection rate</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 text-center mb-4">
+                  <div className="bg-white rounded-lg p-3">
+                    <div className="text-2xl font-bold text-green-500">27%</div>
+                    <div className="text-xs text-gray-600">Repeat Purchases</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-3">
+                    <div className="text-2xl font-bold text-purple-500">4x</div>
+                    <div className="text-xs text-gray-600">More Reviews</div>
+                  </div>
+                </div>
+
+                <div className="bg-blue-100 rounded-lg p-3 text-center">
+                  <div className="text-lg font-bold text-blue-700">&lt;1hr</div>
+                  <div className="text-xs text-blue-600">Query Resolution Time</div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-4">
+                <p className="text-sm text-gray-700 italic">
+                  "You bought wireless earbuds – here are matching cases & chargers that other customers loved!"
+                </p>
+              </div>
+            </div>
+
+            {/* Case Study 3 - Booking & No-Shows */}
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 border border-purple-100">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Reducing No-Shows</h3>
+                  <p className="text-gray-600">Luxury Salon & Spa Chain</p>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <div className="bg-white rounded-lg p-4 mb-4">
+                  <h4 className="font-semibold text-purple-600 mb-2">The Challenge</h4>
+                  <p className="text-sm text-gray-700">35% no-show rate & 2+ hours daily manual follow-ups</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 text-center mb-4">
+                  <div className="bg-white rounded-lg p-3">
+                    <div className="text-2xl font-bold text-green-500">15%</div>
+                    <div className="text-xs text-gray-600">No-Show Rate</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-3">
+                    <div className="text-2xl font-bold text-orange-500">28%</div>
+                    <div className="text-xs text-gray-600">More Bookings</div>
+                  </div>
+                </div>
+
+                <div className="bg-purple-100 rounded-lg p-3 text-center">
+                  <div className="text-lg font-bold text-purple-700">3x</div>
+                  <div className="text-xs text-purple-600">More Reviews Collected</div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-4">
+                <p className="text-sm text-gray-700 italic">
+                  "20% off Spa Therapy this Tuesday – Book Now with one tap! Confirm/Reschedule your appointment."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section id="about" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              About WhatsEra
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We're on a mission to revolutionize customer communication through AI-powered WhatsApp solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
+              <p className="text-gray-700 mb-6">
+                The inspiration for WhatsEase came from recognizing a fundamental gap between how people prefer to communicate and how businesses operate.
+              </p>
+              <p className="text-gray-700 mb-6">
+                While organizing a major tech conference, Founder & CEO faced enormous challenges managing registrations, sending reminders, and coordinating with attendees. Despite spending thousands on fancy tools, most communication ended up happening over WhatsApp anyway – but in a chaotic, manual way that consumed hours of valuable time.
+              </p>
+              <p className="text-gray-700 mb-6">
+                WhatsApp is where people already spend their time – with over 2 billion users globally, it's the world's most popular messaging app. Yet most businesses struggle to leverage it effectively for operations. This realization sparked our vision to build a platform that would transform WhatsApp from a simple chat app into a powerful business automation tool.
+              </p>
+              <p className="text-gray-700 mb-0">
+                This idea evolved into WhatsEase – a comprehensive no-code platform that empowers businesses to automate customer interactions through WhatsApp. Our mission is to help brands create seamless, personalized customer experiences at scale, without writing a single line of code.
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Values</h3>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <svg className="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Customer First</h4>
+                    <p className="text-gray-600 text-sm">Every feature we build starts with understanding customer needs</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <svg className="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Innovation</h4>
+                    <p className="text-gray-600 text-sm">We leverage cutting-edge AI to solve real business problems</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <svg className="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Simplicity</h4>
+                    <p className="text-gray-600 text-sm">Complex technology should be simple to use and understand</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <svg className="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Reliability</h4>
+                    <p className="text-gray-600 text-sm">We build robust solutions that businesses can depend on 24/7</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <svg className="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Transparency</h4>
+                    <p className="text-gray-600 text-sm">Clear communication and honest pricing with no hidden costs</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <svg className="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Growth Mindset</h4>
+                    <p className="text-gray-600 text-sm">We continuously learn and adapt to help our customers succeed</p>
                   </div>
                 </div>
               </div>
