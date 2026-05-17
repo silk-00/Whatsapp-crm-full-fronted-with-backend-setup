@@ -1,4 +1,4 @@
-# WhatsCRM v5.0
+# WhatsCRM 
 
 A modern WhatsApp CRM platform built with React + Vite + TypeScript frontend and Node.js backend.
 
