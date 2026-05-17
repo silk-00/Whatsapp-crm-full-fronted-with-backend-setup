@@ -9,42 +9,6 @@ A modern WhatsApp CRM platform built with React + Vite + TypeScript frontend and
 - MySQL Server running locally
 - Database named `wcrm`
 
-### Installation & Setup
-
-1. **Clone and Install Dependencies**
-   ```bash
-   git clone <repository-url>
-   cd WhatsCRM-v5.0
-   npm install
-   ```
-
-2. **Setup Database**
-   - Make sure MySQL server is running
-   - Create a database named `wcrm`
-   - Run the database setup:
-   ```bash
-   node setup_database.js
-   ```
-
-3. **Configure Environment**
-   - Update `.env` file with your database credentials:
-   ```env
-   DBHOST=localhost
-   DBNAME=wcrm
-   DBUSER=root
-   DBPASS=your_password
-   DBPORT=3306
-   ```
-
-4. **Start the Application**
-   ```bash
-   npm start
-   ```
-
-   This will:
-   - Automatically build the React frontend (if needed)
-   - Start the Node.js backend server
-   - Serve the application on http://localhost:8001
 
 ## 🌟 Features
 
@@ -106,30 +70,6 @@ WhatsCRM v5.0/
 ├── package.json              # Backend dependencies
 └── .env                      # Environment configuration
 ```
-
-## 🔧 Development
-
-### Frontend Development
-```bash
-# Start frontend in development mode (with hot reload)
-npm run frontend:dev
-
-# Build frontend for production
-npm run frontend:build
-```
-
-### Backend Development
-```bash
-# Start only the backend server
-npm run server
-```
-
-### Full Development Setup
-```bash
-# Build frontend and start backend
-npm run dev
-```
-
 ## 🌐 API Endpoints
 
 ### Authentication
@@ -178,48 +118,3 @@ The application is fully responsive and works on:
 - Tablets
 - Mobile phones
 
-## 🚀 Deployment
-
-### Production Build
-```bash
-# Build frontend for production
-npm run frontend:build
-
-# Start production server
-npm run server
-```
-
-### Environment Variables
-Make sure to set proper environment variables for production:
-- `DBHOST` - Database host
-- `DBNAME` - Database name
-- `DBUSER` - Database user
-- `DBPASS` - Database password
-- `JWTKEY` - JWT secret key
-- `FRONTENDURI` - Frontend URL
-- `BACKURI` - Backend URL
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🆘 Support
-
-If you encounter any issues:
-1. Check the console for error messages
-2. Verify database connection
-3. Ensure all dependencies are installed
-4. Check the GitHub issues page
-
----
-
-**WhatsCRM v5.0** - Transform your WhatsApp marketing with the most powerful CRM platform.
-"# work" 
